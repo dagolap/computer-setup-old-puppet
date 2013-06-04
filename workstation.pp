@@ -56,3 +56,19 @@ package { "tools":
 package { "python":
   name => [ "python", "python-virtualenv", "virtualenvwrapper" ]
 }
+
+
+
+#####
+# Dotfiles
+#####
+exec {
+  'install-dot-files':
+    command   => "/home/$user/dev/computer-setup/dotfiles/install.sh",
+    creates   => "/home/$user/.bootstrapped/dotfiles",
+    cwd       => "/home/$user/dev/computer-setup/dotfiles",
+    logoutput => true,
+    timeout   => 0,
+    user      => $user,
+    ;
+}
