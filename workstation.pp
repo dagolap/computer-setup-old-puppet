@@ -58,7 +58,6 @@ package { "python":
 }
 
 
-
 #####
 # Dotfiles
 #####

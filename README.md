@@ -7,11 +7,12 @@ When installing on a new computer:
 
 * sudo apt-get install puppet
 * sudo puppet module install puppetlabs/apt
-* sudo puppet module install smarchive/googlechrome
 * sudo puppet apply workstation.pp
 
 todo
 ----
 
 * LastPass-plugin for chrome
-* 
+* Java JDK
+* Sublime Text
+* Other dev stuff? Ruby? Lua? OpenGL? 
