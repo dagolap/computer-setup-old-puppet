@@ -19,7 +19,7 @@ File {
 #####
 # Desktop use
 #####
-include googlechrome
+#include googlechrome
 package { "browsers":
   name => [ "chromium-browser", "firefox" ]
 }
