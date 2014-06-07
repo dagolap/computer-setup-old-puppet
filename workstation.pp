@@ -3,12 +3,12 @@ $user_group = "dagolap"
 $user_realname = "Dag Olav Prestegarden"
 $user_email = "dagolav@prestegarden.com"
 
-Exec {
-  path => [ "/bin", "/usr/bin", "/sbin", "/usr/sbin" ]
+Package {
+  ensure => present 
 }
 
-Package {
-  ensure => present
+Exec {
+  path => [ "/bin", "/usr/bin", "/sbin", "/usr/sbin" ]
 }
 
 File {
@@ -19,55 +19,31 @@ File {
 #####
 # Desktop use
 #####
-#include googlechrome
-package { "browsers":
-  name => [ "chromium-browser", "firefox" ]
-}
+package {["chromium-browser", "firefox"]:} 
 
 #####
 # Developer Tools
 #####
 # Version Control Systems
-package { "vcs":
-  name => [ "git" ]
-}
-
-file { "gitconfig":
-  path => "/home/$user/.gitconfig",
-  content => "[user]\n\tname = $user_fullname\n\temail = $user_email\n",
-}
+package {["git", "mercurial"]:}
 
 # Editors
-package { "editors":
-  name => [ "vim-gtk", "emacs24" ]
-}
+package {["vim-nox", "vim-gtk"]:}
 
 # Virtualization
-package { "virtualization":
-  name => [ "virtualbox", "vagrant" ]
-}
+package {["virtualbox", "vagrant"]:}
 
 # Tools
-package { "tools":
-  name => [ "screen", "mosh" ]
-}
+package {["tmux", "mosh"]:}
 
 # Python
-package { "python":
-  name => [ "python", "python-virtualenv", "virtualenvwrapper" ]
-}
+package {["python", "python-virtualenv", "virtualenvwrapper"]:}
 
-
-#####
-# Dotfiles
-#####
-exec {
-  'install-dot-files':
-    command   => "/home/$user/dev/computer-setup/dotfiles/install.sh",
-    creates   => "/home/$user/.bootstrapped/dotfiles",
-    cwd       => "/home/$user/dev/computer-setup/dotfiles",
-    logoutput => true,
-    timeout   => 0,
-    user      => $user,
-    ;
+exec {"install-dotfiles":
+  command => "/home/$user/.computer-setup/setup-dotfiles",
+  cwd => "/home/$user/.computer-setup",
+  logoutput => true,
+  timeout => 0,
+  user => $user,
+  environment => "HOME=/home/$user"
 }
