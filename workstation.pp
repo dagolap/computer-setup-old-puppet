@@ -22,6 +22,11 @@ File {
 package {["chromium-browser", "firefox"]:} 
 
 #####
+# General setup
+#####
+package {["zsh"]:}
+
+#####
 # Developer Tools
 #####
 # Version Control Systems
