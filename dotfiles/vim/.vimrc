@@ -5,18 +5,20 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
+if has("win32") || has("win16")
+  set rtp+=~/vimfiles/bundle/Vundle.vim/ 
+  let path='~/vimfiles/bundle'
+  call vundle#begin(path)
+else
+  set rtp+=~/.vim/bundle/Vundle.vim
+  call vundle#begin()
+endif
 Plugin 'gmarik/Vundle.vim'
 
-" Fugitive: Git-plugin for vim
-Plugin 'tpope/vim-fugitive'
-" Ctrlp: fuzzy search plugin
-Plugin 'kien/ctrlp.vim'
+"" Vundle plugins
+Plugin 'tpope/vim-fugitive'        " Fugitive: Git-plugin for vim
+Plugin 'kien/ctrlp.vim'            " Ctrlp: Fuzzy search plugin
+Plugin 'quanganhdo/grb256'         " GRB256: Color scheme by Gary Bernhard
 
 
 " All of your Plugins must be added before the following line
@@ -33,3 +35,15 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+
+colorscheme grb256
+
+if has("gui_running")
+  if has("gui_gtk2")
+    set guifont=Inconsolata\ 12
+  elseif has("gui_macvim")
+    set guifont=Menlo\ Regular:h14
+  elseif has("gui_win32")
+    set guifont=Consolas:h11:cANSI
+  endif
+endif
