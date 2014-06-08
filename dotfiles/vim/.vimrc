@@ -24,20 +24,13 @@ Plugin 'quanganhdo/grb256'         " GRB256: Color scheme by Gary Bernhard
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList          - list configured plugins
-" :PluginInstall(!)    - install (update) plugins
-" :PluginSearch(!) foo - search (or refresh cache first) for foo
-" :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
+" Custom config below
 
+" Colors and stuff
+set background=dark
 colorscheme grb256
 
+" Font settings based on OS
 if has("gui_running")
   if has("gui_gtk2")
     set guifont=Inconsolata\ 12
@@ -47,3 +40,30 @@ if has("gui_running")
     set guifont=Consolas:h11:cANSI
   endif
 endif
+
+" General editing
+syntax on
+
+let mapleader=","
+set textwidth=0
+
+set nu          " Line numbering
+set nocp        " Remove compatibility mode, allowing proper tab completion
+set sm          " Show matching brackets
+set si          " Smart indentation
+set hlsearch    " Highlight all search results
+
+set bs=2        " Allows backspacing before start of indent, back around eol etc.
+set wrap
+set lbr
+
+set expandtab    " Insert spaces instead of tab
+set tabstop=4    " Tabs should align at every 4 chars
+set shiftwidth=4 " Number of spaces for indentation
+
+
+" Python
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+
+" Ruby
+autocmd FileType ruby set omnifunc=rubycomplete#Complete
