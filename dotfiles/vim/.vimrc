@@ -19,7 +19,9 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'        " Fugitive: Git-plugin for vim
 Plugin 'kien/ctrlp.vim'            " Ctrlp: Fuzzy search plugin
 Plugin 'quanganhdo/grb256'         " GRB256: Color scheme by Gary Bernhard
-
+Plugin 'fatih/vim-go'              " Golang support
+Plugin 'scrooloose/syntastic'      " Linting of all kinds of languages
+Plugin 'scrooloose/nerdtree'       " Tree structure overview
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
