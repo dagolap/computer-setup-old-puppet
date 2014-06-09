@@ -79,3 +79,7 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/g
 #
 # Dag Olav Custom
 CASE_SENSITIVE="true"
+
+emulate sh
+. ~/.profile
+emulate zsh
