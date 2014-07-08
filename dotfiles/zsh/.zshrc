@@ -83,3 +83,10 @@ CASE_SENSITIVE="true"
 emulate sh
 . ~/.profile
 emulate zsh
+
+export PATH=$PATH:/home/dagolap/applications/node-v0.10.29-linux-x64/bin
+
+
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/dev/python
+source /usr/share/virtualenvwrapper/virtualenvwrapper.sh

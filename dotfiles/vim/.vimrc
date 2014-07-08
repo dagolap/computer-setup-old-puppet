@@ -16,12 +16,14 @@ endif
 Plugin 'gmarik/Vundle.vim'
 
 "" Vundle plugins
-Plugin 'tpope/vim-fugitive'        " Fugitive: Git-plugin for vim
-Plugin 'kien/ctrlp.vim'            " Ctrlp: Fuzzy search plugin
-Plugin 'quanganhdo/grb256'         " GRB256: Color scheme by Gary Bernhard
-Plugin 'fatih/vim-go'              " Golang support
-Plugin 'scrooloose/syntastic'      " Linting of all kinds of languages
-Plugin 'scrooloose/nerdtree'       " Tree structure overview
+Plugin 'tpope/vim-fugitive'             " Fugitive: Git-plugin for vim
+Plugin 'kien/ctrlp.vim'                 " Ctrlp: Fuzzy search plugin
+Plugin 'quanganhdo/grb256'              " GRB256: Color scheme by Gary Bernhard
+Plugin 'scrooloose/syntastic'           " Linting of all kinds of languages
+Plugin 'scrooloose/nerdtree'            " Tree structure overview
+Plugin 'fatih/vim-go'                   " Golang support
+Plugin 'lukerandall/haskellmode-vim'    " Haskell support
+Plugin 'mattn/emmet-vim'                " Fast HTML coding
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -35,7 +37,7 @@ colorscheme grb256
 " Font settings based on OS
 if has("gui_running")
   if has("gui_gtk2")
-    set guifont=Inconsolata\ 12
+    set guifont=Inconsolata\ 14
   elseif has("gui_macvim")
     set guifont=Menlo\ Regular:h14
   elseif has("gui_win32")
@@ -53,7 +55,7 @@ set nu          " Line numbering
 set nocp        " Remove compatibility mode, allowing proper tab completion
 set sm          " Show matching brackets
 set si          " Smart indentation
-set hlsearch    " Highlight all search results
+set nohlsearch    " Highlight all search results
 
 set bs=2        " Allows backspacing before start of indent, back around eol etc.
 set wrap
@@ -69,3 +71,6 @@ autocmd FileType python set omnifunc=pythoncomplete#Complete
 
 " Ruby
 autocmd FileType ruby set omnifunc=rubycomplete#Complete
+
+" Haskell
+let g:haddock_browser="/usr/bin/chromium-browser"
