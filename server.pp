@@ -37,7 +37,7 @@ package {["zsh"]:}
 package {["git", "mercurial", "bzr"]:}
 
 # Editors
-package {["vim-nox", "emacs-nox"]:}
+package {["vim-nox", "emacs24-nox"]:}
 
 # Virtualization
 package {["virtualbox", "vagrant"]:}
