@@ -1,5 +1,3 @@
-include apt
-
 $user = "dagolap"
 $user_group = "dagolap"
 $user_realname = "Dag Olav Prestegarden"
@@ -19,12 +17,6 @@ File {
 }
 
 #####
-# Add ppas before installing anything
-#####
-Apt::Ppa{} -> Package <| |>
-apt::ppa { "ppa:ubuntu-mozilla-daily/firefox-aurora": }
-
-#####
 # Apt-get update before installing anything
 ####
 # Do i really need this?
@@ -32,11 +24,6 @@ Exec["apt-update"] -> Package <| |>
 exec { "apt-update":
     command => "/usr/bin/apt-get update"
 }
-
-#####
-# Desktop use
-#####
-package {["chromium-browser", "firefox"]:} 
 
 #####
 # General setup
@@ -50,7 +37,7 @@ package {["zsh"]:}
 package {["git", "mercurial", "bzr"]:}
 
 # Editors
-package {["vim-nox", "vim-gtk", "emacs"]:}
+package {["vim-nox", "emacs-nox"]:}
 
 # Virtualization
 package {["virtualbox", "vagrant"]:}
