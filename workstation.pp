@@ -23,6 +23,7 @@ File {
 #####
 Apt::Ppa{} -> Package <| |>
 apt::ppa { "ppa:ubuntu-mozilla-daily/firefox-aurora": }
+apt::ppa { "ppa:nilarimogard/webupd8": }
 
 #####
 # Apt-get update before installing anything
@@ -36,7 +37,7 @@ exec { "apt-update":
 #####
 # Desktop use
 #####
-package {["chromium-browser", "firefox"]:} 
+package {["chromium-browser", "firefox", "albert"]:} 
 
 #####
 # General setup
