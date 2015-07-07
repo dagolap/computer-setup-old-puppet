@@ -73,6 +73,15 @@
 
     ;; Emmet
     emmet-mode
+
+    ;; SCSS-støtte
+    scss-mode
+    
+    ;; Better javascript mode
+    js2-mode
+
+    ;; Haskell mode
+    haskell-mode
     ))
 
 ;; On OS X, an Emacs instance started from the graphical user
