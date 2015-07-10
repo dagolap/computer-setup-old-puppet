@@ -45,7 +45,7 @@ apt::source { 'synapse-core':
 }
 apt::source { 'nodejs':
   comment  => 'Nodejs and NPM Javascript tools',
-  location => 'https://deb.nodesource.com/node_0.12/',
+  location => 'https://deb.nodesource.com/node_0.12',
   release  => 'vivid',
   repos    => 'main',
   key      => {
@@ -60,7 +60,7 @@ apt::source { 'nodejs':
 
 apt::source { 'chrome':
   comment => 'Google Chrome Web Browser',
-  location => 'http://dl.google.com/linux/chrome/deb/',
+  location => 'http://dl.google.com/linux/chrome/deb',
   release => 'stable',
   repos => 'main',
   key => {
