@@ -74,14 +74,20 @@
     ;; Emmet
     emmet-mode
 
-    ;; SCSS-støtte
+    ;; CSS-preprossesorer
     scss-mode
-    
+    less-css-mode 
     ;; Better javascript mode
     js2-mode
 
     ;; Haskell mode
     haskell-mode
+
+    ;; Trestruktur-browser
+    neotree
+
+    ;; puppet-filer
+    puppet-mode
     ))
 
 ;; On OS X, an Emacs instance started from the graphical user

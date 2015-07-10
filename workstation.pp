@@ -23,7 +23,25 @@ File {
 #####
 Apt::Ppa{} -> Package <| |>
 apt::ppa { "ppa:ubuntu-mozilla-daily/firefox-aurora": }
-apt::ppa { "ppa:nilarimogard/webupd8": }
+
+#####
+# Add debian repos without using ppa mechanism
+#####
+Apt::Source{} -> Package <| |>
+apt::source { 'synapse-core':
+  comment  => 'Synapse quick launcher',
+  location => 'http://ppa.launchpad.net/synapse-core/ppa/ubuntu',
+  release  => 'trusty',
+  repos    => 'main',
+  key      => {
+    'id'     => '3DD99294193A09EF9270EEAFE4010F076C2225A4',
+    'server' => 'keyserver.ubuntu.com',
+  },
+  include  => {
+    'src' => true,
+    'deb' => true,
+  },
+}
 
 #####
 # Apt-get update before installing anything
@@ -37,7 +55,7 @@ exec { "apt-update":
 #####
 # Desktop use
 #####
-package {["chromium-browser", "firefox", "albert"]:} 
+package {["chromium-browser", "firefox", "synapse"]:} 
 
 #####
 # General setup
