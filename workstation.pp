@@ -24,6 +24,7 @@ File {
 Apt::Ppa{} -> Package <| |>
 apt::ppa { "ppa:ubuntu-mozilla-daily/firefox-aurora": }
 apt::ppa { "ppa:nilarimogard/webupd8": }
+apt::ppa { "ppa:git-core/ppa": }
 
 #####
 # Apt-get update before installing anything
