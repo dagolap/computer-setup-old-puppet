@@ -85,9 +85,6 @@
 
     ;; Trestruktur-browser
     neotree
-
-    ;; puppet-filer
-    puppet-mode
     ))
 
 ;; On OS X, an Emacs instance started from the graphical user
