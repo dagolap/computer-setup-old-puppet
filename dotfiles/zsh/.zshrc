@@ -98,3 +98,8 @@ source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 [ -s "/home/dagolap/.dnx/dnvm/dnvm.sh" ] && . "/home/dagolap/.dnx/dnvm/dnvm.sh" # Load dnvm
 
 [ -s "/home/dagolap/.k/kvm/kvm.sh" ] && . "/home/dagolap/.k/kvm/kvm.sh" # Load kvm
+
+export EDITOR='~/bin/emacsrun -nw -c -a ""'
+alias emacs='emacsclient -nw -c -a ""'
+alias e='emacsclient -nw -c -a ""'
+alias ew='emacsclient -c -a ""'
