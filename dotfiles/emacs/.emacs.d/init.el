@@ -9,11 +9,11 @@
 (add-to-list 'package-archives
              '("tromey" . "http://tromey.com/elpa/") t)
 (add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+             '("melpa" . "http://melpa.org/packages/") t)
 
-;; (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+;;(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
 ;;                          ("marmalade" . "http://marmalade-repo.org/packages/")
-;;                          ("melpa" . "http://melpa-stable.milkbox.net/packages/")))
+;;                          ("melpa" . "https://stable.melpa.org/packages/")))
 
 
 ;; Load and activate emacs packages. Do this first so that the
@@ -85,6 +85,9 @@
 
     ;; Trestruktur-browser
     neotree
+
+    ;; Material theme baster på Material Design
+    material-theme
     ))
 
 ;; On OS X, an Emacs instance started from the graphical user
@@ -155,3 +158,6 @@
 (set-keyboard-coding-system 'utf-8)
 (set-selection-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
+
+;; Add my custom binary path
+(add-to-list 'exec-path "~/bin")
