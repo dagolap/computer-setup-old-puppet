@@ -93,6 +93,7 @@ export PATH=$PATH:$HOME/bin/gradle-2.7/bin
 export GRADLE_HOME=$HOME/bin/gradle-2.7
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/dev/python
+export NODE_PATH=$NODE_PATH:/home/dagolap/.npm-global/lib/node_modules
 source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 
 [ -s "/home/dagolap/.dnx/dnvm/dnvm.sh" ] && . "/home/dagolap/.dnx/dnvm/dnvm.sh" # Load dnvm
