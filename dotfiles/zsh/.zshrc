@@ -84,8 +84,6 @@ emulate sh
 . ~/.profile
 emulate zsh
 
-export PATH=$PATH:/home/dagolap/applications/node-v0.10.29-linux-x64/bin
-
 export PATH=$PATH:/usr/local/heroku/bin:/home/dagolap/.dnx/runtimes/dnx-mono.1.0.0-beta5/bin:/home/dagolap/.dnx/bin:~/.cabal/bin:/opt/cabal/1.20/bin:/opt/ghc/7.8.4/bin:~/.npm-global/bin:/home/dagolap/.npm-global/bin:/home/dagolap/bin:/home/dagolap/bin/go/bin:/home/dagolap/dev/go/bin:/home/dagolap/Android/Sdk/tools:/home/dagolap/Android/Sdk/tools
 
 export PATH=$PATH:$HOME/bin/gradle-2.7/bin
@@ -93,12 +91,7 @@ export PATH=$PATH:$HOME/bin/gradle-2.7/bin
 export GRADLE_HOME=$HOME/bin/gradle-2.7
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/dev/python
-export NODE_PATH=$NODE_PATH:/home/dagolap/.npm-global/lib/node_modules
 source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
-
-[ -s "/home/dagolap/.dnx/dnvm/dnvm.sh" ] && . "/home/dagolap/.dnx/dnvm/dnvm.sh" # Load dnvm
-
-[ -s "/home/dagolap/.k/kvm/kvm.sh" ] && . "/home/dagolap/.k/kvm/kvm.sh" # Load kvm
 
 export EDITOR='~/bin/emacsrun -nw -c -a ""'
 alias emacs='emacsclient -nw -c -a ""'
