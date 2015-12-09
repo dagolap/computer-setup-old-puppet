@@ -51,9 +51,6 @@
   (comment-or-uncomment-region (line-beginning-position) (line-end-position)))
 (global-set-key (kbd "C-;") 'toggle-comment-on-line)
 
-;; yay rainbows!
-(global-rainbow-delimiters-mode t)
-
 ;; use 2 spaces for tabs
 (defun die-tabs ()
   (interactive)
@@ -70,3 +67,19 @@
     (quit nil)))
 
 (setq electric-indent-mode nil)
+
+;; Use tab rotation indentation for haskell
+(add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
+
+;; yay rainbows!
+(global-rainbow-delimiters-mode t)
+
+
+;; Dont compile SCSS on save
+(setq scss-compile-at-save nil)
+
+
+;; Auto completion
+(add-hook 'after-init-hook 'global-company-mode)
+(global-set-key (kbd "<C-return>") 'company-complete)
+
