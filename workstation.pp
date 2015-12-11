@@ -86,7 +86,7 @@ exec { "apt-update":
 #####
 # Desktop use
 #####
-package {["google-chrome-beta", "chromium-browser", "firefox", "synapse"]:} 
+package {["google-chrome-beta", "chromium-browser", "firefox", "synapse", "keepass2"]:} 
 
 #####
 # General setup
