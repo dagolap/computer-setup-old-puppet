@@ -114,6 +114,13 @@ package {["python", "python-virtualenv", "virtualenvwrapper"]:}
 # Javascript
 package {["nodejs"]:}
 
+exec {"install-docker":
+  command => "wget -qO- https://get.docker.com/ | sh && usermod -aG docker $user",
+  logoutput => true,
+  timeout => 0,
+  user => "root",
+}
+
 exec {"install-dotfiles":
   command => "/home/$user/.computer-setup/setup-dotfiles",
   cwd => "/home/$user/.computer-setup",
