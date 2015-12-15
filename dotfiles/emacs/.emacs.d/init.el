@@ -9,7 +9,7 @@
 (add-to-list 'package-archives
              '("tromey" . "http://tromey.com/elpa/") t)
 (add-to-list 'package-archives
-             '("melpa" . "http://melpa.org/packages/") t)
+             '("melpa-stable" . "http://stable.melpa.org/packages/") t)
 
 ;;(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
 ;;                          ("marmalade" . "http://marmalade-repo.org/packages/")
@@ -88,6 +88,12 @@
 
     ;; Material theme baster på Material Design
     material-theme
+
+    ;; Company for auto completions
+    company
+    
+    ;; Elm mode
+    elm-mode
     ))
 
 ;; On OS X, an Emacs instance started from the graphical user
@@ -161,3 +167,6 @@
 
 ;; Add my custom binary path
 (add-to-list 'exec-path "~/bin")
+
+;; Start company mode for all kinds of fun
+(add-hook 'after-init-hook 'global-company-mode)
