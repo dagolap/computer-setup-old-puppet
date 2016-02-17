@@ -10,3 +10,9 @@
 
 ;; Go straight to scratch buffer on startup
 (setq inhibit-startup-message t)
+
+;; Enables projectile navigation mode
+;;(setq projectile-require-project-root nil)
+(projectile-global-mode)
+
+
