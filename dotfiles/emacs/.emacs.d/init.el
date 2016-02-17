@@ -97,6 +97,9 @@
     
     ;; Elm mode
     elm-mode
+
+    ;; Json-mode for reformatting etc.
+    json-mode
     ))
 
 ;; On OS X, an Emacs instance started from the graphical user
