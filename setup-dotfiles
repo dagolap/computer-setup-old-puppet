@@ -23,5 +23,6 @@ link "~/.computer-setup/dotfiles/vim/.vimrc", "~/.vimrc"
 link "~/.computer-setup/dotfiles/git/.gitconfig", "~/.gitconfig"
 link "~/.computer-setup/dotfiles/zsh/.zshrc", "~/.zshrc"
 link "~/.computer-setup/dotfiles/emacs/.emacs.d/", "~/.emacs.d/"
+link "~/.computer-setup/dotfiles/tmux/.tmux.conf", "~/.tmux.conf"
 
 puts "done"
