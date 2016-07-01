@@ -72,7 +72,7 @@
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
 
 ;; yay rainbows!
-(global-rainbow-delimiters-mode t)
+;; (global-rainbow-delimiters-mode t)
 
 
 ;; Dont compile SCSS on save
