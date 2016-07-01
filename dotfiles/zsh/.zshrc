@@ -5,7 +5,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="dagolap"
+ZSH_THEME="clean"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -80,16 +80,3 @@ emulate sh
 . ~/.profile
 emulate zsh
 
-export PATH=$PATH:/usr/local/heroku/bin:/home/dagolap/.dnx/runtimes/dnx-mono.1.0.0-beta5/bin:/home/dagolap/.dnx/bin:~/.cabal/bin:/opt/cabal/1.20/bin:/opt/ghc/7.8.4/bin:~/.npm-global/bin:/home/dagolap/.npm-global/bin:/home/dagolap/bin:/home/dagolap/bin/go/bin:/home/dagolap/dev/go/bin:/home/dagolap/Android/Sdk/tools:/home/dagolap/Android/Sdk/tools
-
-export PATH=$PATH:$HOME/bin/gradle-2.7/bin
-
-export GRADLE_HOME=$HOME/bin/gradle-2.7
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/dev/python
-source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
-
-export EDITOR='~/bin/emacsrun -nw -c -a ""'
-alias emacs='emacsclient -nw -c -a ""'
-alias e='emacsclient -nw -c -a ""'
-alias ew='emacsclient -c -a ""'
